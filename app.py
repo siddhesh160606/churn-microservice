@@ -34,7 +34,7 @@ st.markdown(
 )
 
 # 3. Sidebar Preset Controls
-st.sidebar.title("🎛️️ Customer Persona Presets")
+st.sidebar.title("🎛 Customer Persona Presets")
 st.sidebar.write("Quick-load test profiles:")
 
 if st.sidebar.button("🔴 High Risk Customer Profile"):
@@ -98,9 +98,9 @@ with col2:
         }
 
         try:
-            # Query FastAPI REST endpoint
+            # Query Live Render FastAPI REST endpoint
             response = requests.post(
-                "http://127.0.0.1:8000/predict", json=payload
+                "https://churn-api-siddhesh.onrender.com/predict", json=payload
             )
 
             if response.status_code == 200:
